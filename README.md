@@ -59,11 +59,11 @@ The script will:
 ```
 confluence_export/
 └── SPACE_KEY/
-    ├── Page Title 1.md
-    ├── Page Title 2.md
+    ├── Page_Title_1.md
+    ├── Page_Title_2.md
     └── attachments/
-        ├── file1.pdf
-        └── file2.png
+        ├── image1.png
+        └── document1.pdf
 ```
 
 ## Testing Connection

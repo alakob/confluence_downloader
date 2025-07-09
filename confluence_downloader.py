@@ -187,7 +187,9 @@ class ConfluenceDownloader:
                 page_title = page['title']
                 
                 # Create sanitized filename
-                safe_title = "".join(c for c in page_title if c.isalnum() or c in (' ', '-', '_')).rstrip()
+                safe_title = "".join(c for c in page_title if c.isalnum() or c in ('-', '_')).rstrip()
+                safe_title = page_title.replace(' ', '_')  # Replace spaces with underscores
+                safe_title = "".join(c for c in safe_title if c.isalnum() or c in ('-', '_')).rstrip()  # Remove other special chars
                 page_file = space_dir / f"{safe_title}.md"
                 
                 # Get page content
